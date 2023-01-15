@@ -1,6 +1,12 @@
 # Sunapp
+Small app running with SunClac library.
+Enter the latitude and longitude to get infos. 
+Or puch 'ici' button, an it will find your location.
+
+Main technologies : Angular, TypeScript 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.5.
+After dowlonad run `npm i` to install all dependencies.
 
 ## Development server
 
