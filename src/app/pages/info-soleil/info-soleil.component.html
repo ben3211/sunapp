@@ -1,0 +1,22 @@
+<h3>Informations soleil</h3>
+<div class="mb-3">
+    <label for="" class="form-label">Latitude</label>
+    <input #inputLat type="number" class="form-control">
+</div>
+<div class="mb-3">
+    <label for="" class="form-label">Longitude</label>
+    <input #inputLong type="number" class="form-control">
+</div>
+<button (click)="addPosition(inputLat.value,inputLong.value)" class="btn btn-warning">Valider</button>
+<button (click)="addCurrentPosition()" class="btn btn-danger">Ici</button>
+<hr>
+<div class="list-group">
+    <div [class.night]="!e.soleilLeve" *ngFor="let e of sunModel.demandes" class="list-group-item">
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">{{e.latitude | number:'.4-8'}}, {{e.longitude| number:'.4-8'}}</h5>
+            <small>{{e.dateDemande | date:'dd/MM/yyyy HH:mm'}}</small>
+        </div>
+        <p class="mb-1">Lever : {{e.dateLever  | date:'HH:mm:ss'}}</p>
+        <p class="mb-1">Coucher : {{e.dateCoucher | date:'HH:mm:ss'}}</p>
+    </div>
+</div>
